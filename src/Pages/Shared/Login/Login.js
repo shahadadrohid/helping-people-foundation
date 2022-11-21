@@ -3,10 +3,11 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import logo from '../../../logos/logo.png';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const navigate = useNavigate();
+    const location = useLocation();
 
     // react firebase hooks implement
     const [
@@ -25,9 +26,9 @@ const Login = () => {
         signInWithEmailAndPassword(email, name);
         event.target.reset()
     }
-
+    const from = location?.state?.from.pathname || '/';
     if (user) {
-        navigate('/')
+        navigate(from, { replace: true })
     }
 
     return (

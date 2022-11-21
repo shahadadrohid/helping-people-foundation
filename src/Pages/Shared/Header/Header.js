@@ -23,7 +23,13 @@ const Header = () => {
                 <Link className='link-style' to="/blog">Blog</Link>
                 {
                     user ?
-                        <button className="btn btn-primary link-style text-white" onClick={handleSignOut}>Sign Out</button>
+                        <>
+                            <Link className="link-style" to="/manage">
+                                Manage
+                            </Link>
+                            <button className="btn btn-primary link-style text-white" onClick={handleSignOut}>Sign Out</button>
+                        </>
+
                         :
                         <Link className='link-style' to="/login">
                             <button className="btn btn-primary">Login</button>
