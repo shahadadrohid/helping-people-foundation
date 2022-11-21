@@ -1,3 +1,18 @@
+##Technologies
+* React Router
+* Firebase
+* Bootstrap
+* React Bootstap
+* React firebase Hooks
+* Axios
+
+* Backend 
+    * Nodejs
+    * Expressjs
+    * Mongodb
+    * Dotenv
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
